@@ -5,7 +5,7 @@
 module.exports = {
   client: {
     service: {
-      name: "jullscolors",
+      name: "xxxxxx",
       localSchemaFile: "./schema.graphql"
     },
     includes: [

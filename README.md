@@ -19,10 +19,13 @@ Opinionated NextJS Typescript boilerplate
 
 - Change app name on `package.json`
 - Update API endpoint on `codegen.yml` and `.graphqlconfig`
+- Replace _xxxxx_ on `apollo.config.js` and `.graphqlconfig` to your app name
 - Add `.env` from `.env.example`
-- Replace colors
+- Replace `<title>` with your app title
 - Add Google Analytics ID to `utils/analytics.ts`
 - Update AWS S3 Keys (If using AWS S3)
+- Add favicon
+- Replace colors
 
 ## Initial Optional Setup
 

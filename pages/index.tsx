@@ -1,15 +1,13 @@
 import React from "react";
 import Head from "next/head";
-import Chrome from "components/Chrome";
-import MainComponent from "components/pages/Index";
 
 const Main: React.SFC = () => (
-  <Chrome>
+  <div>
     <Head>
-      <title>JullsColors</title>
+      <title>MyApp</title>
     </Head>
-    <MainComponent />
-  </Chrome>
+    Welcome to boilerplate
+  </div>
 );
 
 export default Main;
