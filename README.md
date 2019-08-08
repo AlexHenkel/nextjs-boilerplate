@@ -17,6 +17,7 @@ Opinionated NextJS Typescript boilerplate
 
 ## Initial Mandatory Setup
 
+- Remove `.git` folder and run `git init` to start git fresh
 - Change app name on `package.json`
 - Update API endpoint on `codegen.yml` and `.graphqlconfig`
 - Add `.env` from `.env.example`
