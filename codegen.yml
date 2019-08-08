@@ -1,0 +1,17 @@
+overwrite: true
+# Update with graphql API endpoint
+schema: "https://XXXXX.com/graphql"
+documents: "**/*.gql"
+generates:
+  generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      skipTypename: false
+      nonOptionalTypename: true
+      avoidOptionals: false
+      withHOC: false
+      withComponent: true
+      withHooks: true

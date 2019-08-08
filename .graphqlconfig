@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "jullscolors": {
+      "schemaPath": "schema.graphql",
+      "extensions": {
+        "endpoints": {
+          "default": "https://XXXXX.com/graphql"
+        }
+      }
+    }
+  }
+}
