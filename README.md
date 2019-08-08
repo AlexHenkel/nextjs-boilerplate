@@ -17,6 +17,7 @@ Opinionated NextJS Typescript boilerplate
 
 ## Initial Mandatory Setup
 
+- Remove `.git` folder and run `git init` to start git fresh
 - Change app name on `package.json`
 - Update API endpoint on `codegen.yml` and `.graphqlconfig`
 - Replace _xxxxx_ on `apollo.config.js` and `.graphqlconfig` to your app name
