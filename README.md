@@ -14,6 +14,7 @@ Opinionated NextJS Typescript boilerplate
 - AWS S3 image uploads
 - Context API
 - Full screen loader
+- Toast notifications
 
 ## Initial Mandatory Setup
 
