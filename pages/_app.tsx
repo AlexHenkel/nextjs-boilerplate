@@ -6,7 +6,6 @@ import { ApolloProvider as ApolloHooksProvider } from "react-apollo-hooks";
 import GlobalStyle from "components/GlobalStyles";
 import withApolloClient, { IApolloProps } from "utils/withApolloClient";
 import Provider from "components/Provider";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "react-toastify/dist/ReactToastify.min.css";
 
 toast.configure();
