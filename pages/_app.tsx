@@ -1,4 +1,4 @@
-import App, { Container } from "next/app";
+import App from "next/app";
 import React from "react";
 import { toast } from "react-toastify";
 import { ApolloProvider } from "react-apollo";
@@ -14,16 +14,14 @@ class MyApp extends App<IApolloProps> {
   render() {
     const { Component, pageProps, apolloClient } = this.props;
     return (
-      <Container>
-        <ApolloProvider client={apolloClient}>
-          <ApolloHooksProvider client={apolloClient}>
-            <GlobalStyle />
-            <Provider>
-              <Component {...pageProps} />
-            </Provider>
-          </ApolloHooksProvider>
-        </ApolloProvider>
-      </Container>
+      <ApolloProvider client={apolloClient}>
+        <ApolloHooksProvider client={apolloClient}>
+          <GlobalStyle />
+          <Provider>
+            <Component {...pageProps} />
+          </Provider>
+        </ApolloHooksProvider>
+      </ApolloProvider>
     );
   }
 }
