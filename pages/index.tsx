@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import withApollo from "utils/withApolloClient";
 
 const Main: React.SFC = () => (
   <div>
@@ -23,4 +24,4 @@ const Main: React.SFC = () => (
   </div>
 );
 
-export default Main;
+export default withApollo(Main);
