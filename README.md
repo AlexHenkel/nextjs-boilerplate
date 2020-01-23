@@ -22,6 +22,7 @@ Opinionated NextJS Typescript boilerplate
 - Change app name on `package.json`
 - Update API endpoint on `codegen.yml` and `.graphqlconfig`
 - Replace _xxxxx_ on `apollo.config.js` and `.graphqlconfig` to your app name
+- Run `yarn run generate`. You need to have at least one `*.graphql` file, in order for the script to run
 - Add `.env` from `.env.example`
 - Replace `<title>` with your app title
 - Add Google Analytics ID to `utils/analytics.ts`
