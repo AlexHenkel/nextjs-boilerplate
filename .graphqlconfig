@@ -1,12 +1,8 @@
 {
-  "projects": {
-    "xxxxxx": {
-      "schemaPath": "schema.graphql",
-      "extensions": {
-        "endpoints": {
-          "default": "https://XXXXX.com/graphql"
-        }
-      }
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "dev": "https://example.com/graphql"
     }
   }
 }
