@@ -8,5 +8,16 @@ generates:
       - "typescript"
       - "typescript-operations"
       - "typescript-react-apollo"
+    config:
+      - skipTypename: false
+      - nonOptionalTypename: true
+      - avoidOptionals: false
+      - reactApolloVersion: 3
+      - withHOC: false
+      - withComponent: true
+      - withHooks: true
+      - withMutationFn: true
+      - withResultType: true
+      - withMutationOptionsType: true
   ./schema.graphql:
     - "schema-ast"
