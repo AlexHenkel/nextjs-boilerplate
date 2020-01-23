@@ -2,10 +2,9 @@ require("dotenv").config();
 
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
-const withCSS = require("@zeit/next-css");
 
-module.exports = withCSS({
-  webpack(config, options) {
+module.exports = {
+  webpack(config) {
     config.resolve.alias["components"] = path.join(__dirname, "components");
     config.resolve.alias["mocks"] = path.join(__dirname, "mocks");
     config.resolve.alias["utils"] = path.join(__dirname, "utils");
@@ -31,4 +30,4 @@ module.exports = withCSS({
 
     return config;
   }
-});
+};
