@@ -1,29 +1,42 @@
-import Amplify from "aws-amplify";
-import Storage from "./storage";
-
-// TODO: Update to bucket link
-const bucketURL = `https://XXXXXXXXX.s3.amazonaws.com/`;
+import Amplify from 'aws-amplify'
+import Storage from './storage'
 
 Amplify.configure({
   Auth: {
-    identityPoolId: "XXXXXXX", // REQUIRED - Amazon Cognito Identity Pool ID
-    region: "XXXXXX" // REQUIRED - Amazon Cognito Region
+    identityPoolId: process.env.AWS_POOL_ID,
+    region: process.env.AWS_POOL_REGION
   },
   Storage: {
-    bucket: "XXXXXX", // REQUIRED -  Amazon S3 bucket
-    region: "XXXXXX" // OPTIONAL -  Amazon service region
+    bucket: process.env.AWS_STORAGE_BUCKET,
+    region: process.env.AWS_STORAGE_REGION
   }
-});
+})
 
 const customPrefix = {
-  public: ""
-};
+  public: ''
+}
 
-export const uploadImage = (file: File) => {
-  const { name, type } = file;
-  return Storage.put(name, file, {
-    contentType: type,
+const getFileExtension = (name: string) => name.split('.').reverse()[0]
+
+export const uploadImageToS3 = (file: File, name?: string) =>
+  Storage.put(name ? `${name}.${getFileExtension(file.name)}` : file.name, file, {
+    contentType: file.type,
     customPrefix,
-    acl: "public-read"
-  });
-};
+    acl: 'public-read'
+  })
+    .then(res => `${process.env.AWS_STORAGE_URL}/${res.key}`)
+    .catch(err => {
+      console.log(err)
+      return false
+    })
+
+export const uploadImagesToS3 = (files: File[], name: string) =>
+  Promise.all(files.map((file, index: number) => uploadImageToS3(file, `${name}-${index}`))).then(
+    results => {
+      if (results.includes(false)) {
+        // Add toast notification
+        return false
+      }
+      return results as string[]
+    }
+  )

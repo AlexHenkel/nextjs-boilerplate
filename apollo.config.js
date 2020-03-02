@@ -5,13 +5,14 @@
 module.exports = {
   client: {
     service: {
-      name: "xxxxxx",
-      localSchemaFile: "./schema.graphql"
+      name: 'xxxxxx',
+      localSchemaFile: './schema.graphql'
     },
     includes: [
-      "components/**/*.gql",
-      "components/**/*.ts",
-      "components/**/*.tsx"
+      'components/**/*.gql',
+      'graphql/**/*.graphql',
+      'components/**/*.ts',
+      'components/**/*.tsx'
     ]
   }
-};
+}

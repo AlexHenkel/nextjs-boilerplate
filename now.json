@@ -1,0 +1,12 @@
+{
+  "build": {
+    "env": {
+      "GRAPHQL_URL": "@graphql_url",
+      "AWS_POOL_ID": "@aws_pool_id",
+      "AWS_POOL_REGION": "@aws_pool_region",
+      "AWS_STORAGE_BUCKET": "@aws_storage_bucket",
+      "AWS_STORAGE_REGION": "@aws_storage_region",
+      "AWS_STORAGE_URL": "@aws_storage_url"
+    }
+  }
+}

@@ -1,23 +1,23 @@
 overwrite: true
 # Update with graphql API endpoint
-schema: "http://localhost:4000/graphql"
-documents: "**/*.graphql"
+schema: 'http://localhost:4000/'
+documents: '**/*.graphql'
 generates:
   generated/graphql.tsx:
     plugins:
-      - "typescript"
-      - "typescript-operations"
-      - "typescript-react-apollo"
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
     config:
       skipTypename: false
       nonOptionalTypename: true
       avoidOptionals: false
       reactApolloVersion: 3
       withHOC: false
-      withComponent: true
+      withComponent: false
       withHooks: true
       withMutationFn: true
       withResultType: true
       withMutationOptionsType: true
   ./schema.graphql:
-    - "schema-ast"
+    - 'schema-ast'
